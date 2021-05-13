@@ -1,0 +1,386 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size:10px;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+}
+
+a{
+    color:white;
+}
+
+div p{
+    font-size: 2rem;
+}
+
+
+
+.clearfix::after{
+    content:"";
+    font-size: 20px;
+    display:block;
+    clear:both;
+}
+
+article{
+    background-color: green;
+    width: 20%;
+    height: 10vh;
+    border: 2px solid yellow; 
+    float:left;
+
+}
+
+nav{
+    background-color: black;
+}
+
+nav ul{
+    max-width: 1024px;
+    list-style: none;
+    width:80%;
+    margin: 0 auto;
+}
+
+nav ul li{
+  float:left;
+  width:20%;
+  padding: 25px 0;
+}
+
+nav ul li a{
+ display:block;
+ font-size:2rem;
+ text-align:center;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-weight: bold;
+ letter-spacing: 2px;
+}
+
+nav ul li:hover{
+    background-color: purple;
+}
+
+nav ul li a:hover{
+    color:white;
+}
+
+nav ul li a i{
+    font-size: 1.7rem;
+    vertical-align: middle;
+    margin-right:5px;
+    margin-bottom: 3px;
+}
+
+nav ul li:nth-child(odd) a{
+    color:white;
+}
+
+header{
+    background-image: url("https://1000logos.net/wp-content/uploads/2017/05/Premier-League-logo.png");
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    line-height: 36vh;
+    background-color: rgba(0,0,0,0.5);
+}
+
+header p{
+    float:right;
+    color:purple;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    text-align: center;
+    background-color:grey;
+    color: whitesmoke;
+    font-size:11px;
+}
+
+main{
+    width:75%;
+    margin:0 auto;
+    font-size:10px;
+    padding:25px;
+    margin-top:10px;
+    border: 5px solid black;
+    border-color:black;
+    border-radius: 50px 20px;
+}
+
+
+
+img{
+    border: 8px solid black;
+    border-radius: 15px;
+    width:100%;
+}
+
+.column{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+  
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.img__wrap{
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.img__wrap::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.img__description{
+    position: absolute;
+    top: 0;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    border:2px solid rgba(0,0,0,0.5);
+    border-radius:17px;
+    transition: opacity .2s, visibility .2s;
+}
+  
+.img__wrap:hover .img__description{
+    visibility: visible;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.naglowek{
+    text-align: center;
+    font-size:30px;
+    font-weight: 600;
+}
+
+.transfer_obraz{
+    height: 244px;
+}
+
+.pytajnik{
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACOCAMAAAD3qBb7AAAAM1BMVEX///8AAADv7+8PDw8vLy+/v7+fn58/Pz9PT0/Pz8/f399fX19/f38fHx+vr6+Pj49vb28qpRVeAAADzElEQVR4nO2c4ZaiMAxGBRQQQXz/p90zi7Mjzio3tYWQ9P63h3y2SZqmPRwiMxZrUXWxvz0+XbWaHEW7tbHLNOupURSnra1d4rqmGsVxa3OXGFaVo6i3tvc96/nRiWFrg98j9qND29enO2PfiH+venrUMlvaunweoatb0RDNFmZSJJ5j+K3FRDlKhlEcXARhZXg7y0e+aC5rGSeHz/P+xcz4psRDVQsjbUdJTRjOy4PVdIKodabUkR7RH3qGeqjN1OEEv8DpTfXQulpi/5tQj2tCkz6AxRW2UiQj3tKZ9Ak38u2yGgVafkr3cWhrL5vZJVouiez5EPLl0jDQk0FVJqZn8uXSch5KZcYk9nwIyTrkGTXxHip9KZnXIBt9goisclcL/seAGNDtVQ4QWEIWOZBDZWgBRQr5WmEllOi2RCDRZ5NsJrYpMVj+6qA1bleOoIB4NCtHn2ZYlXKAiBgiB0pLoxvzOaflrw7ZW4BhVcqRCLSH2/oj14N4UqUFjwSQHF1nkp4EVGFTfPIUF1YNCwrge+RC1NBZDUsAPPPVetASGXjOorzlJRYlCbKFF09K1dB6ChcZ3JHpwnWwoFIoPsGPCVZDb39HRLgaert/ooG9aOEhrkjUCKrO7wqRGuZ3s51EDfP7FdoRNmE9QZepYX1y4G7SCeOeQ9jib3xyoFLgA7ZzDp6KTphOSHlX/jcqe8IiIUq+/mLZj8rV2MOl4lDkalje2AeoYTmqyK9mWz6XlUZY2b2HvSHNvmyrIc3MbauB+ntmVIYrYPL3Psg9y90iDrGWV4rcjZpWQ/z6iWk1WHePFzUEl/YnWtNqSJeK5X2KfKnYVkMaVQzv6L9ALbRu1JDt6ivrLU+ivYrlbcqEZHLYV0MyOeyrIZkcR/tqCMKK7cR8gpdHPajBE1IPavD6qAMveuA1MB9qYEfqQg38yqv1fcoduFZcdN/jtWK6u+cBGFcsd/c8wkqk1lto/8FyMCd+lD24VlRbf+ZasDCr8nG0FLDtm+FOuDno3W/L3U5z0OTwEmVhWdDNWkFJmJukgz3n4yausJzU+inTD6iG7sZ1oBTdTUrK4qzlyxlz0LN5bl43YmmHmySMyWH7CuQjSA4/gSW/MTmD5OiO4izJ0f3E2SzHHCKHk/OmL0il1E8WhiJLliPL8Ro/OTqSw0+OnslkMplMJpPJZDKZTMYa5765txFWze3qpCP/BV3/3FHZ+un5eab87/sMg1NBrq96gBo/p9U/vOnDNv8Wwy8W3uP0cnPjzuLrpMZftZkD3mp1dOyE7m9stl7+ADT1I7aEMB0gAAAAAElFTkSuQmCC");
+    height:244px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.pytajnik:hover{
+    transform: rotateY(150deg);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQXc7PuHgsjh-gr1ryL4I59U0ySBqKmTvBw&usqp=CAU");
+}
+
+/* Ipad pro pion */
+@media (max-width: 1024px){
+    body {
+      background-color: white;
+
+    }
+
+    .transfer_obraz{
+        height: 15%;
+    }
+
+    .pytajnik{
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACOCAMAAAD3qBb7AAAAM1BMVEX///8AAADv7+8PDw8vLy+/v7+fn58/Pz9PT0/Pz8/f399fX19/f38fHx+vr6+Pj49vb28qpRVeAAADzElEQVR4nO2c4ZaiMAxGBRQQQXz/p90zi7Mjzio3tYWQ9P63h3y2SZqmPRwiMxZrUXWxvz0+XbWaHEW7tbHLNOupURSnra1d4rqmGsVxa3OXGFaVo6i3tvc96/nRiWFrg98j9qND29enO2PfiH+venrUMlvaunweoatb0RDNFmZSJJ5j+K3FRDlKhlEcXARhZXg7y0e+aC5rGSeHz/P+xcz4psRDVQsjbUdJTRjOy4PVdIKodabUkR7RH3qGeqjN1OEEv8DpTfXQulpi/5tQj2tCkz6AxRW2UiQj3tKZ9Ak38u2yGgVafkr3cWhrL5vZJVouiez5EPLl0jDQk0FVJqZn8uXSch5KZcYk9nwIyTrkGTXxHip9KZnXIBt9goisclcL/seAGNDtVQ4QWEIWOZBDZWgBRQr5WmEllOi2RCDRZ5NsJrYpMVj+6qA1bleOoIB4NCtHn2ZYlXKAiBgiB0pLoxvzOaflrw7ZW4BhVcqRCLSH2/oj14N4UqUFjwSQHF1nkp4EVGFTfPIUF1YNCwrge+RC1NBZDUsAPPPVetASGXjOorzlJRYlCbKFF09K1dB6ChcZ3JHpwnWwoFIoPsGPCVZDb39HRLgaert/ooG9aOEhrkjUCKrO7wqRGuZ3s51EDfP7FdoRNmE9QZepYX1y4G7SCeOeQ9jib3xyoFLgA7ZzDp6KTphOSHlX/jcqe8IiIUq+/mLZj8rV2MOl4lDkalje2AeoYTmqyK9mWz6XlUZY2b2HvSHNvmyrIc3MbauB+ntmVIYrYPL3Psg9y90iDrGWV4rcjZpWQ/z6iWk1WHePFzUEl/YnWtNqSJeK5X2KfKnYVkMaVQzv6L9ALbRu1JDt6ivrLU+ivYrlbcqEZHLYV0MyOeyrIZkcR/tqCMKK7cR8gpdHPajBE1IPavD6qAMveuA1MB9qYEfqQg38yqv1fcoduFZcdN/jtWK6u+cBGFcsd/c8wkqk1lto/8FyMCd+lD24VlRbf+ZasDCr8nG0FLDtm+FOuDno3W/L3U5z0OTwEmVhWdDNWkFJmJukgz3n4yausJzU+inTD6iG7sZ1oBTdTUrK4qzlyxlz0LN5bl43YmmHmySMyWH7CuQjSA4/gSW/MTmD5OiO4izJ0f3E2SzHHCKHk/OmL0il1E8WhiJLliPL8Ro/OTqSw0+OnslkMplMJpPJZDKZTMYa5765txFWze3qpCP/BV3/3FHZ+un5eab87/sMg1NBrq96gBo/p9U/vOnDNv8Wwy8W3uP0cnPjzuLrpMZftZkD3mp1dOyE7m9stl7+ADT1I7aEMB0gAAAAAElFTkSuQmCC");
+        height:144px;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+
+    header{
+        background-image: url("https://1000logos.net/wp-content/uploads/2017/05/Premier-League-logo.png");
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
+ /* Ipad pro poziom */
+@media (max-width: 1366px){
+    body {
+      background-color: white;
+
+    }
+
+    .transfer_obraz{
+        height: 15%;
+    }
+
+    .pytajnik{
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACOCAMAAAD3qBb7AAAAM1BMVEX///8AAADv7+8PDw8vLy+/v7+fn58/Pz9PT0/Pz8/f399fX19/f38fHx+vr6+Pj49vb28qpRVeAAADzElEQVR4nO2c4ZaiMAxGBRQQQXz/p90zi7Mjzio3tYWQ9P63h3y2SZqmPRwiMxZrUXWxvz0+XbWaHEW7tbHLNOupURSnra1d4rqmGsVxa3OXGFaVo6i3tvc96/nRiWFrg98j9qND29enO2PfiH+venrUMlvaunweoatb0RDNFmZSJJ5j+K3FRDlKhlEcXARhZXg7y0e+aC5rGSeHz/P+xcz4psRDVQsjbUdJTRjOy4PVdIKodabUkR7RH3qGeqjN1OEEv8DpTfXQulpi/5tQj2tCkz6AxRW2UiQj3tKZ9Ak38u2yGgVafkr3cWhrL5vZJVouiez5EPLl0jDQk0FVJqZn8uXSch5KZcYk9nwIyTrkGTXxHip9KZnXIBt9goisclcL/seAGNDtVQ4QWEIWOZBDZWgBRQr5WmEllOi2RCDRZ5NsJrYpMVj+6qA1bleOoIB4NCtHn2ZYlXKAiBgiB0pLoxvzOaflrw7ZW4BhVcqRCLSH2/oj14N4UqUFjwSQHF1nkp4EVGFTfPIUF1YNCwrge+RC1NBZDUsAPPPVetASGXjOorzlJRYlCbKFF09K1dB6ChcZ3JHpwnWwoFIoPsGPCVZDb39HRLgaert/ooG9aOEhrkjUCKrO7wqRGuZ3s51EDfP7FdoRNmE9QZepYX1y4G7SCeOeQ9jib3xyoFLgA7ZzDp6KTphOSHlX/jcqe8IiIUq+/mLZj8rV2MOl4lDkalje2AeoYTmqyK9mWz6XlUZY2b2HvSHNvmyrIc3MbauB+ntmVIYrYPL3Psg9y90iDrGWV4rcjZpWQ/z6iWk1WHePFzUEl/YnWtNqSJeK5X2KfKnYVkMaVQzv6L9ALbRu1JDt6ivrLU+ivYrlbcqEZHLYV0MyOeyrIZkcR/tqCMKK7cR8gpdHPajBE1IPavD6qAMveuA1MB9qYEfqQg38yqv1fcoduFZcdN/jtWK6u+cBGFcsd/c8wkqk1lto/8FyMCd+lD24VlRbf+ZasDCr8nG0FLDtm+FOuDno3W/L3U5z0OTwEmVhWdDNWkFJmJukgz3n4yausJzU+inTD6iG7sZ1oBTdTUrK4qzlyxlz0LN5bl43YmmHmySMyWH7CuQjSA4/gSW/MTmD5OiO4izJ0f3E2SzHHCKHk/OmL0il1E8WhiJLliPL8Ro/OTqSw0+OnslkMplMJpPJZDKZTMYa5765txFWze3qpCP/BV3/3FHZ+un5eab87/sMg1NBrq96gBo/p9U/vOnDNv8Wwy8W3uP0cnPjzuLrpMZftZkD3mp1dOyE7m9stl7+ADT1I7aEMB0gAAAAAElFTkSuQmCC");
+        height:144px;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+    }    
+
+    header{
+        background-image: url("https://1000logos.net/wp-content/uploads/2017/05/Premier-League-logo.png");
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+ /* Iphone X pion */
+ @media (max-width: 375px){
+    body {
+      background-color: white;
+
+    }
+
+    .transfer_obraz{
+        height: 15%;
+    }
+
+    .pytajnik{
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACOCAMAAAD3qBb7AAAAM1BMVEX///8AAADv7+8PDw8vLy+/v7+fn58/Pz9PT0/Pz8/f399fX19/f38fHx+vr6+Pj49vb28qpRVeAAADzElEQVR4nO2c4ZaiMAxGBRQQQXz/p90zi7Mjzio3tYWQ9P63h3y2SZqmPRwiMxZrUXWxvz0+XbWaHEW7tbHLNOupURSnra1d4rqmGsVxa3OXGFaVo6i3tvc96/nRiWFrg98j9qND29enO2PfiH+venrUMlvaunweoatb0RDNFmZSJJ5j+K3FRDlKhlEcXARhZXg7y0e+aC5rGSeHz/P+xcz4psRDVQsjbUdJTRjOy4PVdIKodabUkR7RH3qGeqjN1OEEv8DpTfXQulpi/5tQj2tCkz6AxRW2UiQj3tKZ9Ak38u2yGgVafkr3cWhrL5vZJVouiez5EPLl0jDQk0FVJqZn8uXSch5KZcYk9nwIyTrkGTXxHip9KZnXIBt9goisclcL/seAGNDtVQ4QWEIWOZBDZWgBRQr5WmEllOi2RCDRZ5NsJrYpMVj+6qA1bleOoIB4NCtHn2ZYlXKAiBgiB0pLoxvzOaflrw7ZW4BhVcqRCLSH2/oj14N4UqUFjwSQHF1nkp4EVGFTfPIUF1YNCwrge+RC1NBZDUsAPPPVetASGXjOorzlJRYlCbKFF09K1dB6ChcZ3JHpwnWwoFIoPsGPCVZDb39HRLgaert/ooG9aOEhrkjUCKrO7wqRGuZ3s51EDfP7FdoRNmE9QZepYX1y4G7SCeOeQ9jib3xyoFLgA7ZzDp6KTphOSHlX/jcqe8IiIUq+/mLZj8rV2MOl4lDkalje2AeoYTmqyK9mWz6XlUZY2b2HvSHNvmyrIc3MbauB+ntmVIYrYPL3Psg9y90iDrGWV4rcjZpWQ/z6iWk1WHePFzUEl/YnWtNqSJeK5X2KfKnYVkMaVQzv6L9ALbRu1JDt6ivrLU+ivYrlbcqEZHLYV0MyOeyrIZkcR/tqCMKK7cR8gpdHPajBE1IPavD6qAMveuA1MB9qYEfqQg38yqv1fcoduFZcdN/jtWK6u+cBGFcsd/c8wkqk1lto/8FyMCd+lD24VlRbf+ZasDCr8nG0FLDtm+FOuDno3W/L3U5z0OTwEmVhWdDNWkFJmJukgz3n4yausJzU+inTD6iG7sZ1oBTdTUrK4qzlyxlz0LN5bl43YmmHmySMyWH7CuQjSA4/gSW/MTmD5OiO4izJ0f3E2SzHHCKHk/OmL0il1E8WhiJLliPL8Ro/OTqSw0+OnslkMplMJpPJZDKZTMYa5765txFWze3qpCP/BV3/3FHZ+un5eab87/sMg1NBrq96gBo/p9U/vOnDNv8Wwy8W3uP0cnPjzuLrpMZftZkD3mp1dOyE7m9stl7+ADT1I7aEMB0gAAAAAElFTkSuQmCC");
+        height:144px;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+    }    
+
+    header{
+        background-image: url("https://1000logos.net/wp-content/uploads/2017/05/Premier-League-logo.png");
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    nav ul{
+        list-style: none;
+        width:80%;
+        margin: 0 auto;
+    }
+
+    nav ul li a i{
+        font-size: 1.0rem;
+        vertical-align: middle;
+        margin-right:5px;
+        margin-bottom: 3px;
+    }
+
+    nav ul li a{
+        display:block;
+        font-size:0.8rem;
+        text-align:center;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+       }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      .column {
+        flex: 50%;
+        padding: 0 4px;
+      }
+
+      .img__description{
+        position: absolute;
+        top: 0;
+        bottom: 10px;
+        left: 5px;
+        right: 5px;
+        background: rgba(0,0,0,0.5);
+        text-align: center;
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        border:2px solid rgba(0,0,0,0.5);
+        border-radius:17px;
+        transition: opacity .2s, visibility .2s;
+        font-size:9px;
+        
+    }
+}
+
+/* Iphone X poziom */
+@media (max-width: 812px){
+    body {
+      background-color: white;
+
+    }
+
+    .transfer_obraz{
+        height: 15%;
+    }
+
+    .pytajnik{
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACOCAMAAAD3qBb7AAAAM1BMVEX///8AAADv7+8PDw8vLy+/v7+fn58/Pz9PT0/Pz8/f399fX19/f38fHx+vr6+Pj49vb28qpRVeAAADzElEQVR4nO2c4ZaiMAxGBRQQQXz/p90zi7Mjzio3tYWQ9P63h3y2SZqmPRwiMxZrUXWxvz0+XbWaHEW7tbHLNOupURSnra1d4rqmGsVxa3OXGFaVo6i3tvc96/nRiWFrg98j9qND29enO2PfiH+venrUMlvaunweoatb0RDNFmZSJJ5j+K3FRDlKhlEcXARhZXg7y0e+aC5rGSeHz/P+xcz4psRDVQsjbUdJTRjOy4PVdIKodabUkR7RH3qGeqjN1OEEv8DpTfXQulpi/5tQj2tCkz6AxRW2UiQj3tKZ9Ak38u2yGgVafkr3cWhrL5vZJVouiez5EPLl0jDQk0FVJqZn8uXSch5KZcYk9nwIyTrkGTXxHip9KZnXIBt9goisclcL/seAGNDtVQ4QWEIWOZBDZWgBRQr5WmEllOi2RCDRZ5NsJrYpMVj+6qA1bleOoIB4NCtHn2ZYlXKAiBgiB0pLoxvzOaflrw7ZW4BhVcqRCLSH2/oj14N4UqUFjwSQHF1nkp4EVGFTfPIUF1YNCwrge+RC1NBZDUsAPPPVetASGXjOorzlJRYlCbKFF09K1dB6ChcZ3JHpwnWwoFIoPsGPCVZDb39HRLgaert/ooG9aOEhrkjUCKrO7wqRGuZ3s51EDfP7FdoRNmE9QZepYX1y4G7SCeOeQ9jib3xyoFLgA7ZzDp6KTphOSHlX/jcqe8IiIUq+/mLZj8rV2MOl4lDkalje2AeoYTmqyK9mWz6XlUZY2b2HvSHNvmyrIc3MbauB+ntmVIYrYPL3Psg9y90iDrGWV4rcjZpWQ/z6iWk1WHePFzUEl/YnWtNqSJeK5X2KfKnYVkMaVQzv6L9ALbRu1JDt6ivrLU+ivYrlbcqEZHLYV0MyOeyrIZkcR/tqCMKK7cR8gpdHPajBE1IPavD6qAMveuA1MB9qYEfqQg38yqv1fcoduFZcdN/jtWK6u+cBGFcsd/c8wkqk1lto/8FyMCd+lD24VlRbf+ZasDCr8nG0FLDtm+FOuDno3W/L3U5z0OTwEmVhWdDNWkFJmJukgz3n4yausJzU+inTD6iG7sZ1oBTdTUrK4qzlyxlz0LN5bl43YmmHmySMyWH7CuQjSA4/gSW/MTmD5OiO4izJ0f3E2SzHHCKHk/OmL0il1E8WhiJLliPL8Ro/OTqSw0+OnslkMplMJpPJZDKZTMYa5765txFWze3qpCP/BV3/3FHZ+un5eab87/sMg1NBrq96gBo/p9U/vOnDNv8Wwy8W3uP0cnPjzuLrpMZftZkD3mp1dOyE7m9stl7+ADT1I7aEMB0gAAAAAElFTkSuQmCC");
+        height:144px;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+    }    
+
+    header{
+        background-image: url("https://1000logos.net/wp-content/uploads/2017/05/Premier-League-logo.png");
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
